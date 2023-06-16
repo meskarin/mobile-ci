@@ -14,8 +14,8 @@ let capabilities = {
     }]
 }
 let bsConf = {
-    user: `${process.env.BS_USER}`,
-    key: `${process.env.BS_KEY}`,
+    user: `${process.env.BSUSER}`,
+    key: `${process.env.BSKEY}`,
     ...generalConf,
     ...capabilities,
     services: ['browserstack'],
@@ -23,4 +23,4 @@ let bsConf = {
 }
 
 module.export = { bsConf }
-console.log(`${process.env.BS_KEY}`)
+console.log(`${process.env.BSKEY}`)

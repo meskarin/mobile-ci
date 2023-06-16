@@ -1,17 +1,19 @@
 class LoginScreen {
     get #storeAddress() { return $('android.widget.EditText') }
-    get #continue() { return $('id:bottom_button') }
-    get #continueWithStoreCredentials () { return $('id:login_site_creds') }
-    get #username() { return $('android=new UiSelector().text("Username")') }
-    get #password() { return $('android=new UiSelector().text("Password")') }
+    get #continueToLogin() { return $('id:bottom_button') }
+    get #continueWithStoreCredentials () { return $('id=com.woocommerce.android:id/login_site_creds') }
+    get #username() { return $('android=new UiSelector().text("Usuário")') }
+    get #password() { return $('android=new UiSelector().text("Senha")') }
     get #twoFactorPasswordBtn() { return $('id:login_enter_password') }
 
     async setStoreAddress(url) {
         this.#storeAddress.setValue(url)
     }
-
-    async continue() {
-        await this.#continue.click()
+    async waitbeEnabled(){
+        await this.#continueToLogin.waitForEnabled()
+    }
+    async continueTologin() {
+        await this.#continueToLogin.click()
     }
 
     async continueWithStoreCredentials() {
@@ -21,7 +23,7 @@ class LoginScreen {
     async login(username, password) {
         await this.#username.setValue(username)
         await this.#password.setValue(password)
-        await this.#continue.click()
+        await this.#continueToLogin.click()
     }
 
     async goToTwoFactorAuth() {
@@ -30,7 +32,7 @@ class LoginScreen {
 
     async twoFactorLogin(password) {
         await this.#password.setValue(password)
-        await this.#continue.click()
+        await this.#continueToLogin.click()
     }
 
 

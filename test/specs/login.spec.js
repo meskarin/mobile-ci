@@ -10,7 +10,8 @@ describe('Access Admin Panel', () => {
     it('shoud login with valid credentials', async () => {
         await homeScreen.goToLogin()
         await loginScreen.setStoreAddress(urlLoja)
-        await loginScreen.continue()
+        await loginScreen.waitbeEnabled()
+        await loginScreen.continueTologin()
         await loginScreen.continueWithStoreCredentials()
         await loginScreen.login(usuario, senha)
         await loginScreen.goToTwoFactorAuth()

@@ -4,8 +4,8 @@ require('dotenv').config()
 
 
 exports.config = {
-    user: `${process.env.BS_USER}`,
-    key: `${process.env.BS_KEY}`,
+    user: `${process.env.BSUSER}`,
+    key: `${process.env.BSKEY}`,
     hostname: 'hub.browserstack.com',
     services: ['browserstack'],
     specs: [
