@@ -2,8 +2,8 @@ class LoginScreen {
     get #storeAddress() { return $('android.widget.EditText') }
     get #continueToLogin() { return $('id:bottom_button') }
     get #continueWithStoreCredentials () { return $('id=com.woocommerce.android:id/login_site_creds') }
-    get #username() { return $('android=new UiSelector().text("Usuário")') }
-    get #password() { return $('android=new UiSelector().text("Senha")') }
+    get #username() { return $('android=new UiSelector().text("User")') }
+    get #password() { return $('android=new UiSelector().text("Password")') }
     get #twoFactorPasswordBtn() { return $('id:login_enter_password') }
 
     async setStoreAddress(url) {

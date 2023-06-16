@@ -1,6 +1,6 @@
 class MyStoreScreen {
     get #myStoreLogo(){
-        return $('~Minha loja')
+        return $('~My store')
     }
 
     get #myStoreName(){
