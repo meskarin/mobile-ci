@@ -1,5 +1,5 @@
 const { localConf } = require('./local.conf')
-const { bsConf } = require('./bs.conf')
+const { bsConf } = require('./bs.conf.js')
 
 require('dotenv').config()
 
